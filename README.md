@@ -1,5 +1,9 @@
 # Caesar Cipher – Python Project
 
+![Python](https://img.shields.io/badge/python-3.11-blue.svg)
+![GitHub Repo stars](https://img.shields.io/github/stars/lvprt-singh/caesar-cipher?style=social)
+![GitHub forks](https://img.shields.io/github/forks/lvprt-singh/caesar-cipher?style=social)
+
 A simple Python program that encrypts and decrypts text using the Caesar Cipher method.  
 Supports both uppercase and lowercase letters, and leaves non-alphabetic characters unchanged.
 
