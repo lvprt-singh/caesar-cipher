@@ -28,21 +28,32 @@ while run_time < 3:
 
     if direction.lower() == 'encrypt':
         text_in = input('Enter a line to encrypt: ')
-        key_in = int(input('Enter your secret password: '))
-        output = encrypt(text_in,key_in)
-        print(output)
+        for attempt in range(3):
+            try:
+                key_in = int(input('Enter your secret password: '))
+                break
+            except:
+                print('Numerical values only')
+                print(f'Number of tries left {2 - attempt}')
+        else:
+            output = encrypt(text_in,key_in)
+            print(output)
 
     elif direction.lower() == 'decrypt':
         text_in = input('Enter a line to decrypt: ')
         key_in = int(input('Enter your secret password: '))
         output = decrypt(text_in,key_in)
         print(output)
+
+    elif direction.lower() == 'exit':
+        print('Thanks for having a look')
+        break
         
     else: 
         run_time += 1
         print('wrong input, try again')
         
-    print(f'Number of tries left: {3 - run_time}')
+        print(f'Number of tries left: {3 - run_time}')
 
     if run_time == 3:
         print('exiting now')
